@@ -21,6 +21,10 @@ import javax.sql.DataSource;
 @EnableJpaRepositories(entityManagerFactoryRef = "appEntityManagerFactory", basePackages = {
         "com.example.springbatch.Repositories.doqtoor_app"}, transactionManagerRef = "appTransactionManager")
 public class Doqtoor_App_Config {
+
+    public static DataSource dataSourceAdmin;
+
+
     @Bean
     @ConfigurationProperties("app.datasource2")
     public DataSourceProperties appDataSourceProperties() {
@@ -29,8 +33,9 @@ public class Doqtoor_App_Config {
     @Bean
     @ConfigurationProperties("app.datasource2.configuration")
     public DataSource appDataSource() {
-        return appDataSourceProperties().initializeDataSourceBuilder()
+        dataSourceAdmin= appDataSourceProperties().initializeDataSourceBuilder()
                 .type(HikariDataSource.class).build();
+        return dataSourceAdmin;
     }
 
     @Bean(name = "appEntityManagerFactory")

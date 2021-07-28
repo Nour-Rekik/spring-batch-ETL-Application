@@ -25,6 +25,9 @@ import javax.sql.DataSource;
 @EnableJpaRepositories(entityManagerFactoryRef = "kpiEntityManagerFactory", basePackages = {
     "com.example.springbatch.Repositories.doqtoor_admin_kpi"}, transactionManagerRef = "kpiTransactionManager")
 public class Doqtoor_Admin_KPI_Config {
+
+    public static DataSource dataSourceAdmin;
+
     @Bean
     @Primary
     @ConfigurationProperties("app.datasource1")
@@ -36,8 +39,9 @@ public class Doqtoor_Admin_KPI_Config {
     @Primary
     @ConfigurationProperties("app.datasource1.configuration")
     public DataSource kpiDataSource() {
-        return kpiDataSourceProperties().initializeDataSourceBuilder()
+        dataSourceAdmin= kpiDataSourceProperties().initializeDataSourceBuilder()
                 .type(HikariDataSource.class).build();
+        return dataSourceAdmin;
     }
 
     @Primary

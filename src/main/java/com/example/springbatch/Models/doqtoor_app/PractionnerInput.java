@@ -1,4 +1,4 @@
-package com.example.springbatch.data;
+package com.example.springbatch.Models.doqtoor_app;
 
 import javax.persistence.Column;
 import javax.persistence.Lob;
