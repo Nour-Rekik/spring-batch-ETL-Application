@@ -1,6 +1,10 @@
-package com.example.springbatch.model;
+package com.example.springbatch.Models.doqtoor_admin_kpi;
 
-public class Practionner {
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+
+public class Practitioner {
     private Long id;
     private String RegionExercise ;
     private String Rib ;

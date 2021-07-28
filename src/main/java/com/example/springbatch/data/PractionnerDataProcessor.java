@@ -1,24 +1,22 @@
 package com.example.springbatch.data;
 
-import com.example.springbatch.model.Practionner;
+import com.example.springbatch.Models.doqtoor_admin_kpi.Practitioner;
 import org.springframework.batch.item.ItemProcessor;
 
-import java.util.logging.Logger;
-
-public class PractionnerDataProcessor implements ItemProcessor<PractionnerInput, Practionner> {
+public class PractionnerDataProcessor implements ItemProcessor<PractionnerInput, Practitioner> {
 
 
     @Override
-    public Practionner process(final PractionnerInput practionnerInput) throws Exception {
+    public Practitioner process(final PractionnerInput practionnerInput) throws Exception {
 
         final String RegionExercise = practionnerInput.getExerciseRegion().toUpperCase();
-        Practionner practionner = new Practionner();
-        practionner.setId(practionnerInput.getId());
-        practionner.setRegionExercise(RegionExercise);
-        practionner.setRib(practionnerInput.getRib());
-        practionner.settaxRegistrationNumber(practionnerInput.getTaxRegistrationNumber());
+        Practitioner practitioner = new Practitioner();
+        practitioner.setId(practionnerInput.getId());
+        practitioner.setRegionExercise(RegionExercise);
+        practitioner.setRib(practionnerInput.getRib());
+        practitioner.settaxRegistrationNumber(practionnerInput.getTaxRegistrationNumber());
 
-        return practionner;
+        return practitioner;
     }
 
 }

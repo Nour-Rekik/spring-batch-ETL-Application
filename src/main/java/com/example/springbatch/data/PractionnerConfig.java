@@ -1,6 +1,5 @@
 package com.example.springbatch.data;
 
-import com.example.springbatch.model.Practionner;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
