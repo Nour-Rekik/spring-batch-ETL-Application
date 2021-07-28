@@ -52,7 +52,6 @@ public class Doqtoor_Admin_KPI_Config {
                 .packages(Practitioner.class, Person.class)
                 .build();
     }
-
     @Primary
     @Bean
     public PlatformTransactionManager kpiTransactionManager(
