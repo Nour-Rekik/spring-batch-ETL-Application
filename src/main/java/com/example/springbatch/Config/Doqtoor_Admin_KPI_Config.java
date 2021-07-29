@@ -48,7 +48,7 @@ public class Doqtoor_Admin_KPI_Config {
     public LocalContainerEntityManagerFactoryBean kpiEntityManagerFactory(EntityManagerFactoryBuilder builder) {
         return builder
                 .dataSource(kpiDataSource())
-                .packages(Practitioner.class, Person.class, Admin.class, Coach.class, Medecin.class)
+                .packages(Practitioner.class,  Admin.class, Coach.class, Medecin.class)
                 .build();
     }
     @Primary
