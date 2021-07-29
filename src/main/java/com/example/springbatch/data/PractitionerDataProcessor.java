@@ -11,7 +11,7 @@ public class PractitionerDataProcessor implements ItemProcessor<PractitionerInpu
     public Practitioner process(final PractitionerInput practitionerInput) throws Exception {
 
         final String RegionExercise = practitionerInput.getExerciseRegion().toUpperCase();
-        Practitioner practitioner = new Practitioner();
+        final Practitioner practitioner = new Practitioner();
         practitioner.setId(practitionerInput.getId());
         practitioner.setRegionExercise(RegionExercise);
         practitioner.setRib(practitionerInput.getRib());

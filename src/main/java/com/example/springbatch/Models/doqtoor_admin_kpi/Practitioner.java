@@ -1,10 +1,13 @@
 package com.example.springbatch.Models.doqtoor_admin_kpi;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
-
+@Entity
 public class Practitioner {
+    @Id
     private Long id;
     private String RegionExercise ;
     private String Rib ;
