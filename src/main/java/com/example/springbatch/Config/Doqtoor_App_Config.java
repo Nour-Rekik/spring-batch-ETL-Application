@@ -1,6 +1,6 @@
 package com.example.springbatch.Config;
 
-import com.example.springbatch.Models.doqtoor_app.Patient;
+import com.example.springbatch.Models.doqtoor_app.*;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
@@ -42,7 +42,7 @@ public class Doqtoor_App_Config {
     public LocalContainerEntityManagerFactoryBean appEntityManagerFactory(EntityManagerFactoryBuilder builder) {
         return builder
                 .dataSource(appDataSource())
-                .packages(Patient.class)
+                .packages(Patient.class, AbstractAuditingEntity.class, Authority.class, PractitionerInput.class, UploadedFilesRegistration.class, User.class , UserInfoDetails.class)
                 .build();
     }
     @Bean

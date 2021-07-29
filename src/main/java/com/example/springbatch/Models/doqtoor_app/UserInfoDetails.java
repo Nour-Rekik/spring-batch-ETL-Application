@@ -34,7 +34,7 @@ public class UserInfoDetails implements Serializable {
     private String country;
 
     @OneToOne(mappedBy = "userInfoDetails")
-    private PractitionerDetails practitionerDetails;
+    private PractitionerInput practitionerDetails;
 
     public Long getId() {
         return id;
@@ -84,11 +84,11 @@ public class UserInfoDetails implements Serializable {
         this.country = country;
     }
 
-    public PractitionerDetails getPractitionerDetails() {
+    public PractitionerInput getPractitionerDetails() {
         return practitionerDetails;
     }
 
-    public void setPractitionerDetails(PractitionerDetails practitionerDetails) {
+    public void setPractitionerDetails(PractitionerInput practitionerDetails) {
         this.practitionerDetails = practitionerDetails;
     }
 

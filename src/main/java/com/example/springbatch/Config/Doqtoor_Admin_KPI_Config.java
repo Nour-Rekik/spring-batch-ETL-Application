@@ -1,7 +1,6 @@
 package com.example.springbatch.Config;
 
-import com.example.springbatch.Models.doqtoor_admin_kpi.Person;
-import com.example.springbatch.Models.doqtoor_admin_kpi.Practitioner;
+import com.example.springbatch.Models.doqtoor_admin_kpi.*;
 import com.zaxxer.hikari.HikariDataSource;
 import liquibase.integration.spring.SpringLiquibase;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -49,7 +48,7 @@ public class Doqtoor_Admin_KPI_Config {
     public LocalContainerEntityManagerFactoryBean kpiEntityManagerFactory(EntityManagerFactoryBuilder builder) {
         return builder
                 .dataSource(kpiDataSource())
-                .packages(Practitioner.class, Person.class)
+                .packages(Practitioner.class, Person.class, Admin.class, Coach.class, Medecin.class)
                 .build();
     }
     @Primary

@@ -32,7 +32,7 @@ public class Practitioner {
     }
 
     public void setRib(String rib) {
-        Rib = rib;
+        this.Rib = rib;
     }
 
     public String gettaxRegistrationNumber() {
@@ -40,7 +40,7 @@ public class Practitioner {
     }
 
     public void settaxRegistrationNumber(String taxRegistrationNumber) {
-        taxRegistrationNumber = taxRegistrationNumber;
+        this.taxRegistrationNumber = taxRegistrationNumber;
     }
 
 }

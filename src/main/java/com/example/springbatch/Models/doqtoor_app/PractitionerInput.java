@@ -1,9 +1,11 @@
 package com.example.springbatch.Models.doqtoor_app;
 
-import javax.persistence.Column;
-import javax.persistence.Lob;
+import javax.persistence.*;
 
-public class PractionnerInput {
+@Entity
+@Table(name = "practitioner_details")
+public class PractitionerInput {
+    @Id
     private Long id;
     private String title;
     private String nationalId;
